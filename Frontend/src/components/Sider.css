@@ -1,0 +1,127 @@
+/* แบบไม่เห็น overflow */
+.custom-sider {
+  overflow-y: auto;
+  scrollbar-width: none;    
+}
+.custom-sider::-webkit-scrollbar {
+  display: none;              
+}
+
+/* แบบเห็น overflow */
+/* .custom-sider {
+  overflow-y: auto;
+  scrollbar-width: thin;             
+  scrollbar-color: #1890ff #001529;   
+}
+
+.custom-sider::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-sider::-webkit-scrollbar-track {
+  background: #001529; 
+}
+
+.custom-sider::-webkit-scrollbar-thumb {
+  background-color: #1890ff; 
+  border-radius: 3px;
+} */
+
+/* เพิ่ม CSS นี้ในไฟล์ CSS ของคุณ */
+
+.custom-toggle-button {
+    transition: all 0.3s ease;
+}
+
+.custom-toggle-button:hover {
+    opacity: 0.8 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+.custom-toggle-button:active {
+    transform: translateY(0px);
+}
+
+/* Override Ant Design default menu item styles for toggle button */
+.custom-toggle-button.ant-menu-item-selected {
+    background-color: inherit !important;
+}
+
+.custom-toggle-button.ant-menu-item:after {
+    display: none !important; /* ซ่อนเส้นขีดด้านขวาของ Ant Design */
+}
+
+/* เพิ่ม effect เมื่อ collapsed/expanded */
+.custom-toggle-button.collapsed-state {
+    background: linear-gradient(45deg, #1890ff, #40a9ff) !important;
+    animation: pulseBlue 2s infinite;
+}
+
+.custom-toggle-button.expanded-state {
+    background: linear-gradient(45deg, #52c41a, #73d13d) !important;
+    animation: pulseGreen 2s infinite;
+}
+
+@keyframes pulseBlue {
+    0% { box-shadow: 0 0 0 0 rgba(24, 144, 255, 0.4); }
+    70% { box-shadow: 0 0 0 5px rgba(24, 144, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(24, 144, 255, 0); }
+}
+
+@keyframes pulseGreen {
+    0% { box-shadow: 0 0 0 0 rgba(82, 196, 26, 0.4); }
+    70% { box-shadow: 0 0 0 5px rgba(82, 196, 26, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(82, 196, 26, 0); }
+}
+
+/* เปลี่ยนสีพื้นหลังของ Sider */
+.ant-layout-sider {
+  background-color: #01203cef; /* ตัวอย่าง: สีน้ำเงินเข้ม */
+}
+
+/* เปลี่ยนสีข้อความเมนู */
+.ant-menu-dark .ant-menu-item,
+.ant-menu-dark .ant-menu-submenu-title {
+  color: #000000; /* ตัวอักษรขาว */
+}
+
+/* หัวข้อของ Submenu ปกติ */
+.ant-menu-submenu-title {
+  color: #01203cef !important;
+  font-weight: 500;
+  background-color: transparent !important; /* ไม่มีพื้นหลัง */
+}
+
+/* หัวข้อของ Submenu ตอน hover */
+.ant-menu-submenu-title:hover {
+  background-color: #01203cef !important;
+  color: #ffffff !important;
+}
+
+/* หัวข้อของ Submenu ตอน selected/active */
+.ant-menu-submenu-selected > .ant-menu-submenu-title {
+  background-color: #01203cef !important; /* สีส้ม หรือสีที่ต้องการ */
+  color: #ffffff !important;
+  font-weight: 600;  /* หนากว่า */
+}
+
+/* เมนูที่ถูกเลือก (active) */
+.ant-menu-item-selected {
+  background-color: #01203cef !important; /* เปลี่ยนเป็นสีส้ม/ตามที่ต้องการ */
+  color: #ffffff !important; /* ตัวอักษรขาว */
+}
+
+.ant-menu-submenu-selected > .ant-menu-submenu-title,
+.ant-menu-submenu-open > .ant-menu-submenu-title {
+  background-color: transparent !important; /* ❌ ไม่เอาพื้นหลัง */
+  color: #01203cef !important;  /* ✅ ใช้สี font แทน */
+  font-weight: 600;  
+  border-left: 4px solid #ffffff; /* จะเอาเส้นหรือไม่ก็ได้ */
+}
+
+/* ไอคอนในเมนูที่ถูกเลือก */
+.ant-menu-item-selected .anticon,
+.ant-menu-submenu-selected .anticon {
+  color: #ffffff !important;
+}

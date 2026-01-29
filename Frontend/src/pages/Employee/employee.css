@@ -1,0 +1,90 @@
+.profile {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 12px;
+}
+
+.config-btn {
+  background-color: #11288f !important;
+  border: none !important;
+}
+
+.custom-btn {
+  background-color: #11288f !important;
+  color: #fff !important;
+  border: none !important;
+
+  font-size: 18px !important;   
+  padding: 10px 20px !important; 
+  border-radius: 8px;          
+  height: auto !important;    
+}
+
+.custom-btn:hover,
+.custom-btn:focus {
+  background-color: #3b51b5 !important; 
+  color: #fff !important;
+}
+
+.custom-btn .anticon {
+  color: #fff !important;
+}
+
+.confirm-button {
+    background-color: #117606 !important;
+    color: #fff !important;
+    border: none !important;
+}
+
+.confirm-button:hover,
+.confirm-button:focus {
+  background-color: #23a615 !important; 
+  color: #fff !important;
+}
+
+.confirm-button .anticon {
+  color: #fff !important;
+}
+
+.card-selected {
+  background-color: #ffffff;  /* เขียวอ่อน */
+  border: 2px solid #3750c2;  /* ขอบเขียว */
+}
+
+.cursor-pointer {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+}
+
+.cursor-pointer:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cursor-pointer:active {
+  background-color: #7f7f7f; 
+  transform: scale(0.98);
+}
+
+.ant-pagination-item-active {
+  border-color: #11288f !important;   
+  background-color: #11288f !important; 
+}
+
+.ant-pagination-item-active a {
+  color: #fff !important; /* สีตัวเลขตอน active */
+}
+
+.emp-card {
+    /* Basic drop shadow */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    border: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+}
